@@ -1,42 +1,78 @@
 /* Cookie popup styles */
 
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
-
+/* Use the same font as the rest of the site */
 #cookie-popup {
-  font-family: "Source Code Pro", monospace;
   position: fixed;
-  bottom: 0;
-  left: 0;
-  background-color: #333;
-  color: #fff;
-  padding: 2rem;
-  text-align: center;
-  font-size: 1.25rem;
-  max-width: 100%;
-  height: auto;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 520px;
+  width: calc(100% - 2rem);
+  padding: 1.25rem 1.5rem;
+  background: rgba(15, 23, 42, 0.98); /* dark navy */
+  color: #f9fafb; /* near white */
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  border-radius: 0.75rem;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.5);
   z-index: 9999;
+  display: none; /* default hidden, JS shows it if needed */
+}
+
+/* Layout inside popup */
+#cookie-popup p {
+  margin: 0 0 0.75rem 0;
 }
 
 #cookie-popup a {
-  color: #fff;
-}
-
-#cookie-popup a:hover {
-  color: lightpink;
+  color: #38bdf8; /* light blue accent */
   text-decoration: underline;
 }
 
-#accept-cookies {
-  font-family: "Source Code Pro", monospace;
-  background-color: #fff;
-  color: #333;
-  border: none;
-  padding: 5px 10px;
-  font-size: 1.25rem;
-  cursor: pointer;
+#cookie-popup a:hover {
+  color: #0ea5e9;
 }
 
-#accept-cookies:hover {
-  background-color: lightpink;
-  transition: 0.4s;
+/* Button container (optional if you want to add more later) */
+#cookie-popup button {
+  margin-top: 0.25rem;
+}
+
+/* Accept button (ID must match HTML + JS: cookie-accept) */
+#cookie-accept {
+  font-family: inherit;
+  background: #facc15; /* yellow accent */
+  color: #111827;
+  border: none;
+  padding: 0.55rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  box-shadow: 0 8px 20px rgba(250, 204, 21, 0.35);
+}
+
+#cookie-accept:hover {
+  background: #eab308;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(250, 204, 21, 0.45);
+}
+
+/* Small screens: full-width bar style */
+@media (max-width: 576px) {
+  #cookie-popup {
+    bottom: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    border-radius: 0;
+    padding: 1rem 1.25rem;
+  }
+
+  #cookie-accept {
+    width: 100%;
+    margin-top: 0.5rem;
+  }
 }
