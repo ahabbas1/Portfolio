@@ -3,7 +3,7 @@
 const cookiePopup = document.getElementById("cookie-popup");
 
 // Get the accept button
-const acceptCookies = document.getElementById("accept-cookies");
+const acceptCookies = document.getElementById("cookie-accept");
 
 // Function to set a cookie
 function setCookie(cname, cvalue, exdays) {
