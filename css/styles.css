@@ -11731,4 +11731,14 @@ html {
     width: 1.5vw;
     left: -2vw;
   }
+  .brand-link {
+  color: #6f42c1;        /* match your theme purple */
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.brand-link:hover {
+  text-decoration: underline;
+}
+
 }
