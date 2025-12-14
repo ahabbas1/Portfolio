@@ -62,20 +62,24 @@ _(Replace with your actual domain)_
 ---
 
 ## 📂 Project Structure
+
 /
-├── index.html
-├── resume.html
-├── projects.html
-├── contact.html
-├── privacy.html
-├── cookies.html
-├── terms.html
+├── index.html              # Home page
+├── resume.html             # Resume / experience page
+├── projects.html           # Projects page
+├── contact.html            # Contact page
+├── privacy.html            # Privacy policy
+├── cookies.html            # Cookie policy
+├── terms.html              # Terms & conditions
 ├── css/
-│ └── styles.css
+│   └── styles.css          # Custom styles
 ├── js/
-│ └── scripts.js
+│   ├── scripts.js          # Core theme scripts
+│   └── cookie-popup.js     # Cookie consent logic
 ├── assets/
-│ └── images and favicon
+│   ├── favicon.ico
+│   └── images/             # Profile + project images
+
 
 ---
 
